@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : area
+Design : sha3
+Version: R-2020.09-SP2
+Date   : Fri Sep 22 10:36:02 2023
+****************************************
+
+Library(s) Used:
+
+    uk65lscllmvbbr_120c25_tc (File: /software/dk/umc65/Core-lib_LL_Multi-Voltage_Reg.Vt/synopsys/uk65lscllmvbbr_120c25_tc.db)
+
+Number of ports:                        13047
+Number of nets:                         30684
+Number of cells:                        18609
+Number of combinational cells:          16970
+Number of sequential cells:              1628
+Number of macros/black boxes:               0
+Number of buf/inv:                       2193
+Number of references:                      86
+
+Combinational area:              41954.400246
+Buf/Inv area:                     2801.880098
+Noncombinational area:           13042.800117
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 54997.200363
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+sha3                              54997.2004    100.0  12083.0404  13015.4401  0.0000  sha3
+clk_gate_permutation_number_reg       6.8400      0.0      0.0000      6.8400  0.0000  SNPS_CLOCK_GATE_HIGH_sha3_1
+clk_gate_round_number_new_reg         6.8400      0.0      0.0000      6.8400  0.0000  SNPS_CLOCK_GATE_HIGH_sha3_3
+clk_gate_sha3_ctrl_new_reg            6.8400      0.0      0.0000      6.8400  0.0000  SNPS_CLOCK_GATE_HIGH_sha3_2
+clk_gate_state_reg_reg                6.8400      0.0      0.0000      6.8400  0.0000  SNPS_CLOCK_GATE_HIGH_sha3_0
+uut_RC                               93.9600      0.2     93.9600      0.0000  0.0000  keccak_round_constants_gen
+uut_input_pattern                  1252.4400      2.3   1252.4400      0.0000  0.0000  input_pattern
+uut_keccak                        23015.5199     41.8  23015.5199      0.0000  0.0000  keccak_round
+uut_output_pattern                    0.0000      0.0      0.0000      0.0000  0.0000  output_pattern
+uut_vsx                            5509.4399     10.0   5509.4399      0.0000  0.0000  vsx
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+Total                                                  41954.4002  13042.8001  0.0000
+
+1

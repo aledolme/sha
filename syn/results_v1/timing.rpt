@@ -1,0 +1,65 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : sha3
+Version: R-2020.09-SP2
+Date   : Fri Sep 22 10:36:02 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: uk65lscllmvbbr_120c25_tc   Library: uk65lscllmvbbr_120c25_tc
+Wire Load Model Mode: top
+
+  Startpoint: state_reg_reg_1084_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: state_reg_reg_993_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sha3               wl0                   uk65lscllmvbbr_120c25_tc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  state_reg_reg_1084_/CK (DFQRM2RA)                       0.00 #     0.00 r
+  state_reg_reg_1084_/Q (DFQRM2RA)                        0.10       0.10 r
+  uut_keccak/round_in[1084] (keccak_round)                0.00       0.10 r
+  uut_keccak/U3399/Z (XOR2M2RA)                           0.08       0.18 f
+  uut_keccak/U3400/Z (XNR4M2RA)                           0.12       0.31 r
+  uut_keccak/U5529/Z (XOR2M4RA)                           0.09       0.40 f
+  uut_keccak/U3858/Z (XOR2M3RA)                           0.07       0.47 r
+  uut_keccak/U4975/Z (INVM3R)                             0.02       0.48 f
+  uut_keccak/U4976/Z (NR2M3R)                             0.03       0.51 r
+  uut_keccak/U5792/Z (XOR2M2RA)                           0.05       0.56 r
+  uut_keccak/round_out[993] (keccak_round)                0.00       0.56 r
+  U14292/Z (CKINVM2R)                                     0.02       0.59 f
+  U14650/Z (NR2M2R)                                       0.03       0.62 r
+  uut_vsx/vsx_in_state[993] (vsx)                         0.00       0.62 r
+  uut_vsx/U1310/Z (XOR2M2RA)                              0.05       0.67 r
+  uut_vsx/vsx_out[993] (vsx)                              0.00       0.67 r
+  U11167/Z (ND2M2R)                                       0.02       0.69 f
+  U11111/Z (ND2M2R)                                       0.02       0.72 r
+  state_reg_reg_993_/D (DFQRM2RA)                         0.00       0.72 r
+  data arrival time                                                  0.72
+
+  clock CLK (rise edge)                                   0.73       0.73
+  clock network delay (ideal)                             0.00       0.73
+  state_reg_reg_993_/CK (DFQRM2RA)                        0.00       0.73 r
+  library setup time                                     -0.01       0.72
+  data required time                                                 0.72
+  --------------------------------------------------------------------------
+  data required time                                                 0.72
+  data arrival time                                                 -0.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

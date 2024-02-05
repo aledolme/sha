@@ -1,0 +1,56 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : sha3
+Version: R-2020.09-SP2
+Date   : Fri Sep 22 10:36:03 2023
+****************************************
+
+
+Library(s) Used:
+
+    uk65lscllmvbbr_120c25_tc (File: /software/dk/umc65/Core-lib_LL_Multi-Voltage_Reg.Vt/synopsys/uk65lscllmvbbr_120c25_tc.db)
+
+
+Operating Conditions: uk65lscllmvbbr_120c25_tc   Library: uk65lscllmvbbr_120c25_tc
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+sha3                   wl0               uk65lscllmvbbr_120c25_tc
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  15.6401 mW    (2%)
+  Net Switching Power  = 755.9612 mW   (98%)
+                         ---------
+Total Dynamic Power    = 771.6014 mW  (100%)
+
+Cell Leakage Power     =   5.8989 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  -7.2978e+00          748.5687        2.0442e+03          741.2709 (  96.07%)
+register          11.4773            0.8637        9.2454e+05           12.3419  (   1.60%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     11.4606            6.5289        4.9723e+06           17.9945  (   2.33%)
+--------------------------------------------------------------------------------------------------
+Total             15.6402 mW       755.9613 mW     5.8989e+06 pW       771.6073 mW
+1

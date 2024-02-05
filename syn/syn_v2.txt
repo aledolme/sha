@@ -1,0 +1,21 @@
+sh mkdir WORK
+define_design_lib WORK -path ./WORK
+analyze -library WORK -format sverilog {../src/keccak_round_constants_gen.sv {} ../src/keccak_round.sv ../src/input_pattern.sv ../src/output_pattern.sv ../src/vsx.sv ../src/sha3.sv}
+set search_path [list $search_path . ../include /software/synopsys/syn_current/libraries/syn /software/dk/umc65/Core-lib_LL_Multi-Voltage_Reg.Vt/synopsys ]
+set link_library [list "*" "uk65lscllmvbbr_120c25_tc.db" "dw_foundation.sldb" ]
+set target_library [list "uk65lscllmvbbr_120c25_tc.db" ]
+set synthetic_library [list "dw_foundation.sldb" ]
+elaborate sha3
+link
+create_clock -name "clk" -period 0.73 [ get_ports clk ]
+write -f ddc -hierarchy -output results_v2/precompiled_v2.ddc
+report_clocks > results_v2/clock.rpt
+report_timing > results_v2/timing.rpt
+compile_ultra -no_autoungroup -no_boundary_optimization -timing -gate_clock
+write -f ddc -hierarchy -output results_v2/compiled.ddc
+report_area -hier -nosplit > results_v2/area.rpt
+report_resources -hierarchy > results_v2/resources.rpt
+report_power > results_v2/power.rpt
+report_timing -nosplit > results_v2/timing.rpt
+
+write -format verilog -hier -o netlist_v2.v

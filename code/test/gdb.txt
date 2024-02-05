@@ -1,0 +1,34 @@
+The program is not being run.
+Loading section .text, size 0x12a1e lma 0x10074
+Loading section .rodata, size 0x100c lma 0x22a98
+Loading section .eh_frame, size 0x4 lma 0x24000
+Loading section .init_array, size 0x8 lma 0x24004
+Loading section .fini_array, size 0x4 lma 0x2400c
+Loading section .data, size 0x99c lma 0x24010
+Loading section .sdata, size 0x2c lma 0x249b0
+Start address 0x10086
+Transfer rate: 663568 bits in <1 sec.
+The program is not being run.
+Starting program: /home/alessandra.dolmeta/ATHOS/athos_heep/sw/applications/shatest/myprogram 
+Test started! 
+
+Input SHA3-256:
+000102030405060708090A0B
+Output SHA3-256: 
+4ACBD92D310FC38697084C1BC7A79516A9BE20701DAE8EB36C643F07F45EDBD6
+
+
+Input SHA3-512:
+000102030405060708090A0B
+Output SHA3-512: 
+06E9C5BDE5128B27926B475874B371F7D8352FEDD18BF29F9C7C1F7BC1AD267E93FB5562D3E0FEB47CE10089ADA5B67D6BBB225A5181BE3789D539D2368DDCB2
+
+
+Input SHA3-348:
+000102030405060708090A0B
+Output SHA3-348: 
+F35855F43EA37F0C41C156ED3B56C8EE337BC2FF343F571952DD26B67019261397EB840A2FFD540AEC2623E2D4AB3781
+
+Test Ended! 
+[Inferior 1 (process 42000) exited normally]
+The program is not being run.

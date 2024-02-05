@@ -1,0 +1,19 @@
+disAlready logging to assembly_trace.txt.
+Python scripting is not supported in this copy of GDB.
+Quit
+Breakpoint 1 at 0x1039c
+The program is not being run.
+Starting program: /home/alessandra.dolmeta/ATHOS/athos_heep/sw/applications/shatest/myprogram 
+Test started! 
+
+Input SHA3-256:
+
+Breakpoint 1, 0x0001039c in sha3_256 ()
+0x0001039e in sha3_256 ()
+0x000103a2 in sha3_256 ()
+0x000103a6 in sha3_256 ()
+0x000103aa in sha3_256 ()
+0x000103ac in sha3_256 ()
+0x00014290 in keccak_absorb ()
+0x00014292 in keccak_absorb ()
+0x00014296 in keccak_absorb ()

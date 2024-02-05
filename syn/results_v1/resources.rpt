@@ -1,0 +1,74 @@
+ 
+****************************************
+Report : resources
+Design : sha3
+Version: R-2020.09-SP2
+Date   : Fri Sep 22 10:36:02 2023
+****************************************
+
+
+Resource Report for this hierarchy in file ../src/sha3.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| eq_x_7         | DW_cmp         | width=8    | eq_112 (sha3.sv:112)       |
+| lt_x_10        | DW_cmp         | width=5    | lt_213 (sha3.sv:213)       |
+| add_x_11       | DW01_inc       | width=8    | add_252 (sha3.sv:252)      |
+| add_x_9        | DW01_inc       | width=5    | add_205 (sha3.sv:205)      |
+|                |                |            | add_220 (sha3.sv:220)      |
+|                |                |            | add_226 (sha3.sv:226)      |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| eq_x_7             | DW_cmp           | apparch (area)     |                |
+| lt_x_10            | DW_cmp           | apparch (area)     |                |
+| add_x_11           | DW01_inc         | pparch (area,speed)                 |
+| add_x_9            | DW01_inc         | apparch (area)     |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : output_pattern
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : vsx
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : keccak_round_constants_gen
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : keccak_round
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : input_pattern
+****************************************
+
+No implementations to report
+1
